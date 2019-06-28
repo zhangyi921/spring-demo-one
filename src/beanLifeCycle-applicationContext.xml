@@ -17,7 +17,7 @@
  	<bean id="TrackCoach"
  		class="com.springdemo.TrackCoach"
  		init-method="doMyStartUpStuff"
- 		destory-method="doMyCleanupStuff">
+ 		destroy-method="doMyCleanupStuff">
  		<!--  set up constructor injection -->
  		<constructor-arg ref="myFortune"></constructor-arg>		
  	</bean>
