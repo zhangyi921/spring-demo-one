@@ -15,10 +15,12 @@ public class MainDemoApp {
 		
 		// get the bean from spring container
 		AccountDAO theAccountDAO = context.getBean("accountDAO", AccountDAO.class);
-		theAccountDAO.addAccount();
+		theAccountDAO.addAccount(new Account(), false);
+		theAccountDAO.doWork();
 		
 		MembershipDAO theMembershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
 		theMembershipDAO.addAccount();
+		theMembershipDAO.goToSleep();
 		
 		
 		// close the context

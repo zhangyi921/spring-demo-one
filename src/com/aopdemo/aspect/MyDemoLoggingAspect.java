@@ -25,4 +25,22 @@ public class MyDemoLoggingAspect {
 	public void f2() {
 		System.out.println("\n====>> Executing @Before advice on any return type");
 	}
+	
+	// for any add with specific type
+	@Before("execution(* add*(com.aopdemo.Account, ..))")
+	public void f3() {
+		System.out.println("\n====>> Executing @Before advice on add with specific type and other parameters");
+	}
+	
+	// for any add with specific type
+	@Before("execution(* add*(..))")
+	public void f4() {
+		System.out.println("\n====>> Executing @Before advice on add with any parameters");
+	}
+	
+	// for any add with specific type
+	@Before("execution(* com.aopdemo.dao.*.*(..))")
+	public void f5() {
+		System.out.println("\n====>> Executing @Before advice on any class in com.aopdemo.dao with any methods with any parameters");
+	}
 }
