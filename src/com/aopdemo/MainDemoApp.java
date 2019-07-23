@@ -18,6 +18,13 @@ public class MainDemoApp {
 		theAccountDAO.addAccount(new Account(), false);
 		theAccountDAO.doWork();
 		
+		// call the accountdao getter/setter methods
+		theAccountDAO.setName("ff");
+		theAccountDAO.setServiceCode("fds");
+		
+		theAccountDAO.getName();
+		theAccountDAO.getServiceCode();
+		
 		MembershipDAO theMembershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
 		theMembershipDAO.addAccount();
 		theMembershipDAO.goToSleep();
